@@ -21,6 +21,10 @@ export class ProductService extends HttpService {
     searchProductsOfAnyCategory(searchTerm){
         return this.axios.get(`/products/search/${searchTerm}`)
     }
+
+    getPopularProducts(){
+        return this.axios.get('products/popular')
+    }
 }                           
 
 export const productsService = new ProductService()

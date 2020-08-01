@@ -19,12 +19,21 @@
         </div>
       </div>
     </div>
+    <div class="right">
+      <div>
+        <!-- <div class="popular-title">
+          <h3>Popular Components:</h3>
+        </div> -->
+        <PopularComponents/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 
 import { mapActions, mapGetters } from "vuex"
+import PopularComponents from '../components/PopularComponents'
 
 export default {
 
@@ -34,6 +43,10 @@ export default {
       products: 'getProducts',
       categoryId: 'getCategoryId'
     })
+  },
+
+  components:{
+    PopularComponents
   },
 
   methods:{
@@ -104,4 +117,20 @@ button {
   text-decoration: none;
   cursor: pointer;
 }
+
+.right { 
+  width: 20%;
+  bottom: 3%;
+  right: 10px;
+  position: fixed; 
+  /* background: #f2f2f2; */
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+}
+
+/* .popular-title{
+  margin-bottom: 20px;
+  font-family: 'Staatliches';
+} */
 </style>
